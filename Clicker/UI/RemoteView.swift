@@ -26,10 +26,20 @@ struct RemoteView: View {
         }
     }
 
+    /// Button sizes per platform. The Mac popover is narrower than a phone, and the top row has five
+    /// buttons, so on the Mac they are smaller. Top row width = power + 4 x utility + 5 x spacing, which
+    /// must stay under the width minus both side paddings (Mac: 258 of 300 pt; iPhone SE: 308 of 327 pt).
+    private struct Metrics {
+        let sidePadding: CGFloat
+        let power: CGFloat
+        let utility: CGFloat
+        let topSpacing: CGFloat
+    }
+
     #if os(macOS)
-    private static let sidePadding: CGFloat = 20
+    private static let metrics = Metrics(sidePadding: 20, power: 48, utility: 40, topSpacing: 10)
     #else
-    private static let sidePadding: CGFloat = 24
+    private static let metrics = Metrics(sidePadding: 24, power: 56, utility: 48, topSpacing: 12)
     #endif
 
     var body: some View {
@@ -55,8 +65,8 @@ struct RemoteView: View {
                 #endif
                 Spacer(minLength: 8)
             }
-            .padding(.horizontal, Self.sidePadding)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.horizontal, Self.metrics.sidePadding)
+            .frame(width: geometry.size.width, height: geometry.size.height)
         }
         .background(Theme.background.ignoresSafeArea())
         .panel(item: $sheet, title: \Sheet.title) { sheet in
@@ -189,13 +199,13 @@ struct RemoteView: View {
     // MARK: Rows
 
     private var topRow: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: Self.metrics.topSpacing) {
             powerButton
-            Spacer()
-            UtilityCircle(symbol: "number", label: "Numbers") { sheet = .numbers }
-            UtilityCircle(symbol: "keyboard", label: "Keyboard", highlighted: model.remote.tvWantsText) { sheet = .keyboard }
-            UtilityCircle(symbol: "square.grid.2x2", label: "Apps") { sheet = .apps }
-            KeyCircle(key: .source, label: "Source", symbol: "rectangle.on.rectangle", size: 48, tint: Theme.secondary)
+            Spacer(minLength: 0)
+            UtilityCircle(symbol: "number", label: "Numbers", size: Self.metrics.utility) { sheet = .numbers }
+            UtilityCircle(symbol: "keyboard", label: "Keyboard", size: Self.metrics.utility, highlighted: model.remote.tvWantsText) { sheet = .keyboard }
+            UtilityCircle(symbol: "square.grid.2x2", label: "Apps", size: Self.metrics.utility) { sheet = .apps }
+            KeyCircle(key: .source, label: "Source", symbol: "rectangle.on.rectangle", size: Self.metrics.utility, tint: Theme.secondary)
         }
     }
 
@@ -212,11 +222,11 @@ struct RemoteView: View {
                         .controlSize(.small)
                 } else {
                     Image(systemName: "power")
-                        .font(.system(size: 22, weight: .semibold))
+                        .font(.system(size: Self.metrics.power * 0.39, weight: .semibold))
                         .foregroundStyle(model.power == .on ? Color.primary : Color.accentColor)
                 }
             }
-            .frame(width: 56, height: 56)
+            .frame(width: Self.metrics.power, height: Self.metrics.power)
         }
         .accessibilityLabel("Power")
     }
