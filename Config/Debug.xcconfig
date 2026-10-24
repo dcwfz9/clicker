@@ -1,0 +1,5 @@
+// Debug builds: your signing settings, then an optional pre-paired TV for development.
+// Both files are git-ignored and optional. See Signing.xcconfig.example and Local.xcconfig.example.
+CLICKER_BUNDLE_ID = com.example.clicker
+#include? "../Signing.xcconfig"
+#include? "../Local.xcconfig"

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Clicker</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>ClickerSeedHAEntity</key>
+	<string>$(CLICKER_SEED_HA_ENTITY)</string>
+	<key>ClickerSeedHAToken</key>
+	<string>$(CLICKER_SEED_HA_TOKEN)</string>
+	<key>ClickerSeedHAURL</key>
+	<string>$(CLICKER_SEED_HA_URL)</string>
+	<key>ClickerSeedHost</key>
+	<string>$(CLICKER_SEED_HOST)</string>
+	<key>ClickerSeedID</key>
+	<string>$(CLICKER_SEED_ID)</string>
+	<key>ClickerSeedMAC</key>
+	<string>$(CLICKER_SEED_MAC)</string>
+	<key>ClickerSeedModel</key>
+	<string>$(CLICKER_SEED_MODEL)</string>
+	<key>ClickerSeedName</key>
+	<string>$(CLICKER_SEED_NAME)</string>
+	<key>ClickerSeedToken</key>
+	<string>$(CLICKER_SEED_TOKEN)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_airplay._tcp</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Clicker finds and controls your TV over your home Wi‑Fi.</string>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,11 @@
+// Copy to Local.xcconfig (git-ignored). Debug builds read these into Info.plist and, on first launch,
+// set the TV up without the add/pair steps. Leave a value empty to skip it. Release builds ignore this file.
+CLICKER_SEED_HOST =
+CLICKER_SEED_NAME =
+CLICKER_SEED_MODEL =
+CLICKER_SEED_ID =
+CLICKER_SEED_MAC =
+CLICKER_SEED_TOKEN =
+CLICKER_SEED_HA_URL =
+CLICKER_SEED_HA_ENTITY =
+CLICKER_SEED_HA_TOKEN =

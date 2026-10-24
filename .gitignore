@@ -1,0 +1,17 @@
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Local secrets and seeds (see Local.xcconfig.example)
+Local.xcconfig
+Signing.xcconfig
+.tv_token_test
+
+# macOS
+.DS_Store

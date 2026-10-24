@@ -1,0 +1,3 @@
+// Release builds: your signing settings only. The development seed in Local.xcconfig never reaches Release.
+CLICKER_BUNDLE_ID = com.example.clicker
+#include? "../Signing.xcconfig"

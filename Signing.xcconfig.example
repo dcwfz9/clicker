@@ -1,0 +1,5 @@
+// Copy to Signing.xcconfig (git-ignored) to build for a device or archive.
+// Your team ID is in Xcode > Settings > Accounts, or at developer.apple.com/account under Membership.
+// The bundle ID has to be unique to you, e.g. com.yourname.clicker.
+DEVELOPMENT_TEAM = ABCDE12345
+CLICKER_BUNDLE_ID = com.yourname.clicker
