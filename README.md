@@ -27,7 +27,7 @@ I kept losing my TV remote, so I made one that lives on devices I don't lose.
 
 ## The first connection
 
-The first time Clicker connects, the TV shows a prompt to allow it. Accept it with the TV's own remote, or with a USB keyboard or mouse plugged into the TV. Clicker keeps the token the TV hands back, so this happens once per device. Your phone or Mac has to be on the same network as the TV.
+The first time Clicker connects, the TV shows a prompt to allow it. Accept it with the TV's own remote, or with a USB keyboard plugged into the TV, which is how I did it. Clicker keeps the token the TV hands back, so this happens once per device. Your phone or Mac has to be on the same network as the TV.
 
 ## Build from source
 
@@ -55,9 +55,9 @@ To skip the pairing prompt on a development build, `scripts/seed.py` writes a gi
 
 ## Compatibility
 
-Tested on a 2024 Samsung QN65Q80D. It should work with Samsung TVs from 2018 on that have the network remote-control API. Older models are untested.
+Tested on a 2024 Samsung QN65Q80D: pairing, keys, turning it on from standby, launching apps, and typing into the TV's search bar. It should work with Samsung TVs from 2018 on that have the network remote-control API. Older models are untested.
 
-Not tested yet: turning the TV on from standby, and launching apps.
+Not tested yet: the Home Assistant fallback.
 
 ## Privacy
 
